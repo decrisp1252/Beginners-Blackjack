@@ -8,7 +8,7 @@ import random
 def setup_debug_log():
     # creates log format and generates a quick message
     logging.basicConfig(filename="logFile.log", filemode="w",
-                        format="%(asctime)s %(name)s %(levelname)s %(message)s", level=logging.INFO)
+                        format="%(asctime)s %(name)s %(levelname)s %(message)s", level=logging.DEBUG)
     logging.info("Ran setup_debug_log. I did my job!")
 
 
@@ -52,7 +52,7 @@ def generate_card_deck(card_packs):
 
 
 # This function is used to generate the hands for the player and the dealer.
-def play_game(card_holder):
+def generate_hands(card_holder):
     counter = 0
     player_hand = []
     dealer_hand = []
@@ -64,14 +64,17 @@ def play_game(card_holder):
         counter += 1
         logging.info("Added to player and dealer hand successfully")
         if counter == 2:
-            logging.info("Hands successfully generated")
+            logging.debug("Finished with generating hands")
             break
     return player_hand, dealer_hand
+
+def play_game(player_hand, dealer_hand):
+    print("Placeholder")  # To be continued here
 
 
 if __name__ == "__main__":
     setup_debug_log()
-    play_game(generate_card_deck(determine_card_packs()))
+    generate_hands(generate_card_deck(determine_card_packs()))
     # ------------------------------------------
     logging.info("End of code, program exiting")
     quit()
