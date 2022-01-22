@@ -51,7 +51,10 @@ def generate_card_deck(card_packs):
     return card_holder
 
 
-# This function is used to generate the hands for the player and the dealer.
+# This function is used to generate the hands for the player and the dealer. It works by first taking the first card
+# the deck generated earlier and then adding it to the player's hand (which is also a list.) It then removes that card
+# from the list. The function then repeats the same for the dealer and adds to the counter, which is used to cancel the
+# loop. It then returns the hands.
 def generate_hands(card_holder):
     counter = 0
     player_hand = []
@@ -68,8 +71,134 @@ def generate_hands(card_holder):
             break
     return player_hand, dealer_hand
 
-def play_game(player_hand, dealer_hand):
-    print("Placeholder")  # To be continued here
+
+# This function assigns the variables to each of the cards the player has. Using the match to stop endless 'elif'
+# statements, it then adds this to a score tally which will be used to calculate the result in the back end. Aces also
+# have a variable, meaning that it can be properly modelled in the program
+def assign_values(player_hand, dealer_hand):
+    player_score = 0
+    player_ace_counter = 0
+    dealer_score = 0
+    dealer_ace_counter = 0
+    counter = 0
+    while True:
+        match player_hand[counter]:
+            case "2":
+                player_score += 2
+                logging.info("Added score 2 to card")
+                counter += 1
+            case "3":
+                player_score += 3
+                logging.info("Added score 3 to card")
+                counter += 1
+            case "4":
+                player_score += 4
+                logging.info("Added score 4 to card")
+                counter += 1
+            case "5":
+                player_score += 5
+                logging.info("Added score 5 to card")
+                counter += 1
+            case "6":
+                player_score += 6
+                logging.info("Added score 6 to card")
+                counter += 1
+            case "7":
+                player_score += 7
+                logging.info("Added score 7 to card")
+                counter += 1
+            case "8":
+                player_score += 8
+                logging.info("Added score 8 to card")
+                counter += 1
+            case "9":
+                player_score += 9
+                logging.info("Added score 9 to card")
+                counter += 1
+            case "10":
+                player_score += 10
+                logging.info("Added score 10 to card")
+                counter += 1
+            case "J":
+                player_score += 10
+                logging.info("Added score J to card")
+                counter += 1
+            case "Q":
+                player_score += 10
+                logging.info("Added score Q to card")
+                counter += 1
+            case "K":
+                player_score += 10
+                logging.info("Added score K to card")
+                counter += 1
+            case "A":
+                player_ace_counter += 1
+                player_score += 11
+                logging.info("Added score A to card")
+                counter += 1
+        if counter == 2:
+            break
+        counter = 0
+        while True:
+            match dealer_hand[counter]:
+                case "2":
+                    dealer_score += 2
+                    logging.info("Added score 2 to card")
+                    counter += 1
+                case "3":
+                    dealer_score += 3
+                    logging.info("Added score 3 to card")
+                    counter += 1
+                case "4":
+                    dealer_score += 4
+                    logging.info("Added score 4 to card")
+                    counter += 1
+                case "5":
+                    dealer_score += 5
+                    logging.info("Added score 5 to card")
+                    counter += 1
+                case "6":
+                    dealer_score += 6
+                    logging.info("Added score 6 to card")
+                    counter += 1
+                case "7":
+                    dealer_score += 7
+                    logging.info("Added score 7 to card")
+                    counter += 1
+                case "8":
+                    dealer_score += 8
+                    logging.info("Added score 8 to card")
+                    counter += 1
+                case "9":
+                    dealer_score += 9
+                    logging.info("Added score 9 to card")
+                    counter += 1
+                case "10":
+                    dealer_score += 10
+                    logging.info("Added score 10 to card")
+                    counter += 1
+                case "J":
+                    dealer_score += 10
+                    logging.info("Added score J to card")
+                    counter += 1
+                case "Q":
+                    dealer_score += 10
+                    logging.info("Added score Q to card")
+                    counter += 1
+                case "K":
+                    dealer_score += 10
+                    logging.info("Added score K to card")
+                    counter += 1
+                case "A":
+                    dealer_ace_counter += 1
+                    dealer_score += 11
+                    logging.info("Added score A to card")
+                    counter += 1
+            if counter == 1:
+                break
+        print(player_hand, player_score, player_ace_counter)
+        print(dealer_hand, dealer_score, dealer_ace_counter)
+        return player_score, dealer_score, player_ace_counter, dealer_ace_counter
 
 
 if __name__ == "__main__":
