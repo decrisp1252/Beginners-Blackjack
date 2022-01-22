@@ -124,8 +124,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main 3.9" />
       <item itemvalue="Python.main 3.10" />
+      <item itemvalue="Python.main 3.9" />
       <item itemvalue="Python.scratch" />
     </list>
     <recent_temporary>
