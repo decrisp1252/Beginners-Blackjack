@@ -1,10 +1,10 @@
-2022-01-20 12:45:57,242 root INFO Ran setup_debug_log. I did my job!
-2022-01-20 12:45:58,343 root DEBUG generate_card_deck running
-2022-01-20 12:45:58,343 root INFO Card pack added to holder successfully
-2022-01-20 12:45:58,343 root INFO Card pack added to holder successfully
-2022-01-20 12:45:58,343 root DEBUG Finished with generating cards
-2022-01-20 12:45:58,343 root INFO Cards shuffled successfully
-2022-01-20 12:45:58,343 root INFO Added to player and dealer hand successfully
-2022-01-20 12:45:58,344 root INFO Added to player and dealer hand successfully
-2022-01-20 12:45:58,344 root DEBUG Finished with generating hands
-2022-01-20 12:45:58,344 root INFO End of code, program exiting
+2022-01-22 02:31:18,729 root INFO Ran setup_debug_log. I did my job!
+2022-01-22 02:31:20,331 root DEBUG generate_card_deck running
+2022-01-22 02:31:20,331 root INFO Card pack added to holder successfully
+2022-01-22 02:31:20,331 root INFO Card pack added to holder successfully
+2022-01-22 02:31:20,331 root DEBUG Finished with generating cards
+2022-01-22 02:31:20,331 root INFO Cards shuffled successfully
+2022-01-22 02:31:20,331 root INFO Added to player and dealer hand successfully
+2022-01-22 02:31:20,331 root INFO Added to player and dealer hand successfully
+2022-01-22 02:31:20,331 root DEBUG Finished with generating hands
+2022-01-22 02:31:20,331 root INFO End of code, program exiting
